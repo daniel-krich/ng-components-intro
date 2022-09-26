@@ -1,0 +1,35 @@
+.reflection-wrapper {
+    padding: 15px;
+    background-color: #00cc90;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.input-wrapper > input[type=text] {
+    padding: 12px;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+}
+
+.input-wrapper > button {
+    padding: 10px;
+    outline: none;
+    background-color: #212121;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.reflection {
+    margin-top: 15px;
+    color: #fff;
+    font-size: 25px;
+}

@@ -1,0 +1,9 @@
+<div class="reflection-wrapper">
+    <div class="input-wrapper">
+        <input type="text" placeholder="input some text..." #reflectionInput>
+        <button (click)="updateReflection()">Reflect</button>
+    </div>
+    <div class="reflection" [hidden]="reflectionParagraphText.length <= 0">
+        Reflection: <span [innerText]="this.reflectionParagraphText"></span>
+    </div>
+</div>
