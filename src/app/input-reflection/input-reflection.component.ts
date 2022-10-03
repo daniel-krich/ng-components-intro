@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-input-reflection',
@@ -8,6 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class InputReflectionComponent implements OnInit {
     public reflectionInput : string = "";
     public reflectionParagraphText : string = "";
+
+    @Output() reflectionParagraphTextChanged : EventEmitter<string> = new EventEmitter<string>(); 
+
     constructor() { }
 
     ngOnInit(): void {
@@ -15,6 +19,8 @@ export class InputReflectionComponent implements OnInit {
 
     public updateReflection() {
         this.reflectionParagraphText = this.reflectionInput;
+
+        this.reflectionParagraphTextChanged.emit(this.reflectionParagraphText);
     }
 
 }
