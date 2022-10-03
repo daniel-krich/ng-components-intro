@@ -1,7 +1,7 @@
 <div class="cw">
     <div>
         <input type="text" placeholder="name" [(ngModel)]="this.nameInput">
-        <button (click)="this.onNameInputSubmit()" [hidden]="this.nameInput.length == 0">Display name</button>
+        <button (click)="this.onNameInputSubmit()" [disabled]="this.nameInput.length == 0">Display name</button>
     </div>
     <p [innerText]="this.nameP"></p>
 </div>
