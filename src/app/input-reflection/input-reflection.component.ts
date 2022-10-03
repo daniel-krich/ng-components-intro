@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-input-reflection',
@@ -6,7 +6,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./input-reflection.component.scss']
 })
 export class InputReflectionComponent implements OnInit {
-    @ViewChild('reflectionInput') reflectionInput: ElementRef | undefined;
+    public reflectionInput : string = "";
     public reflectionParagraphText : string = "";
     constructor() { }
 
@@ -14,7 +14,7 @@ export class InputReflectionComponent implements OnInit {
     }
 
     public updateReflection() {
-        this.reflectionParagraphText = this.reflectionInput?.nativeElement.value;
+        this.reflectionParagraphText = this.reflectionInput;
     }
 
 }

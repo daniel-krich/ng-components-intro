@@ -1,9 +1,7 @@
 <div class="reflection-wrapper">
     <div class="input-wrapper">
-        <input type="text" placeholder="input some text..." #reflectionInput>
+        <input type="text" [(ngModel)]="this.reflectionInput" placeholder="input some text...">
         <button (click)="updateReflection()">Reflect</button>
     </div>
-    <div class="reflection" [hidden]="reflectionParagraphText.length <= 0">
-        Reflection: <span [innerText]="this.reflectionParagraphText"></span>
-    </div>
+    <app-input-dummy [simpleText]="reflectionParagraphText"></app-input-dummy>
 </div>
