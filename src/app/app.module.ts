@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { InputReflectionComponent } from './input-reflection/input-reflection.component';
 import { PicabooComponent } from './picaboo/picaboo.component';
 import { InputDummyComponent } from './input-dummy/input-dummy.component';
+import { ClassWorkComponent } from './class-work/class-work.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InputReflectionComponent,
     PicabooComponent,
-    InputDummyComponent
+    InputDummyComponent,
+    ClassWorkComponent
   ],
   imports: [
     BrowserModule,
